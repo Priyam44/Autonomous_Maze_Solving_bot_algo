@@ -455,58 +455,7 @@ int main()
 	}
 	printmaze(maze,n,m,&currcell);
 	cout << "-------------------------------------------------------------------------------------" << endl;
-	//return journey
-	/*
-	while (currcell.x!=n-1 && currcell.y!=m-1) {
-		if (!visited[currcell.x][currcell.y]) {
-			//updating walls
-			wall_discovered = wall_update(maze[currcell.x][currcell.y], direction, maze, targetmaze);
-			if (wall_discovered) {
-				if (maze[currcell.x][currcell.y].cellvalue != 0) {
-					//updating cell values
-					update_cell_values(&maze[currcell.x][currcell.y], maze);
-				}
-			}
-		}
-		//checking minimum accessible neighbour
-		int _min = INT_MAX;
-		char nextcell_direction = ' ';
-		if (!maze[currcell.x][currcell.y].west) {
-			if (_min>maze[currcell.x][currcell.y - 1].cellvalue) {
-				_min = maze[currcell.x][currcell.y - 1].cellvalue;
-				nextcell_direction = 'w';
-			}
-		}
-		if (!maze[currcell.x][currcell.y].east) {
-			if (_min>maze[currcell.x][currcell.y + 1].cellvalue) {
-				_min = maze[currcell.x][currcell.y + 1].cellvalue;
-				nextcell_direction = 'e';
-			}
-
-		}
-		if (!maze[currcell.x][currcell.y].north) {
-			if (_min>maze[currcell.x - 1][currcell.y].cellvalue) {
-				_min = maze[currcell.x - 1][currcell.y].cellvalue;
-				nextcell_direction = 'n';
-			}
-		}
-		if (!maze[currcell.x][currcell.y].south) {
-			if (_min>maze[currcell.x + 1][currcell.y].cellvalue) {
-				_min = maze[currcell.x + 1][currcell.y].cellvalue;
-				nextcell_direction = 's';
-			}
-		}
-		//moving to minimum accesible neighbour
-		visited[currcell.x][currcell.y] = true;
-		move(direction, nextcell_direction, currcell, maze);
-
-		printmaze(maze, n, m);
-
-
-	}*/
-
-
-
+	
 
 	for (int i = 0; i<n; i++) {
 		delete[] maze[i];
