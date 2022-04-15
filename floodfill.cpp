@@ -360,35 +360,7 @@ int main()
             }
 
 	}
-	/*visited[0][0] = true;
-	for (int i = 0; i<n; i++) {
-		for (int j = 0; j<m; j++) {
-			if (i - 1 >= 0) {
-				if (!visited[i - 1][j]) {
-					maze[i - 1][j].cellvalue = maze[i][j].cellvalue + 1;
-					visited[i - 1][j] = true;
-				}
-			}
-			if (j - 1 >= 0) {
-				if (!visited[i][j - 1]) {
-					maze[i][j - 1].cellvalue = maze[i][j].cellvalue + 1;
-					visited[i][j - 1] = true;
-				}
-			}
-			if (j + 1<m) {
-				if (!visited[i][j + 1]) {
-					maze[i][j + 1].cellvalue = maze[i][j].cellvalue + 1;
-					visited[i][j + 1] = true;
-				}
-			}
-			if (i + 1<n) {
-				if (!visited[i + 1][j]) {
-					maze[i + 1][j].cellvalue = maze[i][j].cellvalue + 1;
-					visited[i + 1][j] = true;
-				}
-			}
-		}
-	}*/
+	
 	printmaze(maze, n, m,NULL);
 
 	//-------------------------------------
